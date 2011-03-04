@@ -1,6 +1,6 @@
 diff -ur parole-0.2.0.2/browser-plugin/media-plugin/main.c parole-0.2.0.2-ui/browser-plugin/media-plugin/main.c
 --- parole-0.2.0.2/browser-plugin/media-plugin/main.c	2010-01-25 12:50:28.000000000 +0100
-+++ parole-0.2.0.2-ui/browser-plugin/media-plugin/main.c	2011-03-04 13:58:01.000000000 +0100
++++ parole-0.2.0.2-ui/browser-plugin/media-plugin/main.c	2011-03-04 22:05:43.492711564 +0100
 @@ -31,7 +31,7 @@
  
  #include <gtk/gtk.h>
@@ -12,7 +12,7 @@ diff -ur parole-0.2.0.2/browser-plugin/media-plugin/main.c parole-0.2.0.2-ui/bro
  
 diff -ur parole-0.2.0.2/browser-plugin/media-plugin/Makefile.am parole-0.2.0.2-ui/browser-plugin/media-plugin/Makefile.am
 --- parole-0.2.0.2/browser-plugin/media-plugin/Makefile.am	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/browser-plugin/media-plugin/Makefile.am	2011-03-04 13:58:11.000000000 +0100
++++ parole-0.2.0.2-ui/browser-plugin/media-plugin/Makefile.am	2011-03-04 22:05:43.493711064 +0100
 @@ -22,7 +22,7 @@
  	$(GST_VIDEO_CFLAGS)                     \
          $(GST_INTERFACES_CFLAGS)		\
@@ -40,7 +40,7 @@ diff -ur parole-0.2.0.2/browser-plugin/media-plugin/Makefile.am parole-0.2.0.2-u
 +	$(BUILT_SOURCES)
 diff -ur parole-0.2.0.2/browser-plugin/media-plugin/parole-plugin-player.c parole-0.2.0.2-ui/browser-plugin/media-plugin/parole-plugin-player.c
 --- parole-0.2.0.2/browser-plugin/media-plugin/parole-plugin-player.c	2010-01-25 12:50:01.000000000 +0100
-+++ parole-0.2.0.2-ui/browser-plugin/media-plugin/parole-plugin-player.c	2011-03-04 13:58:30.000000000 +0100
++++ parole-0.2.0.2-ui/browser-plugin/media-plugin/parole-plugin-player.c	2011-03-04 22:05:43.498708564 +0100
 @@ -31,7 +31,7 @@
  #include <parole/parole.h>
  
@@ -52,7 +52,7 @@ diff -ur parole-0.2.0.2/browser-plugin/media-plugin/parole-plugin-player.c parol
  
 diff -ur parole-0.2.0.2/configure.ac parole-0.2.0.2-ui/configure.ac
 --- parole-0.2.0.2/configure.ac	2010-01-25 12:47:15.000000000 +0100
-+++ parole-0.2.0.2-ui/configure.ac	2011-03-04 12:30:49.000000000 +0100
++++ parole-0.2.0.2-ui/configure.ac	2011-03-04 22:05:43.499708064 +0100
 @@ -78,7 +78,7 @@
  m4_define([dbus_minimum_version], [0.60])
  m4_define([dbus_glib_minimum_version], [0.70])
@@ -73,7 +73,7 @@ diff -ur parole-0.2.0.2/configure.ac parole-0.2.0.2-ui/configure.ac
  #=======================================================#
 diff -ur parole-0.2.0.2/gst/Makefile.am parole-0.2.0.2-ui/gst/Makefile.am
 --- parole-0.2.0.2/gst/Makefile.am	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/gst/Makefile.am	2011-03-04 12:32:44.000000000 +0100
++++ parole-0.2.0.2-ui/gst/Makefile.am	2011-03-04 22:05:43.500707564 +0100
 @@ -23,10 +23,11 @@
  	parole-gst-iface.h
  	
@@ -89,7 +89,7 @@ diff -ur parole-0.2.0.2/gst/Makefile.am parole-0.2.0.2-ui/gst/Makefile.am
  	$(top_builddir)/parole/libparole.la\
 diff -ur parole-0.2.0.2/gst/parole-gst.c parole-0.2.0.2-ui/gst/parole-gst.c
 --- parole-0.2.0.2/gst/parole-gst.c	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/gst/parole-gst.c	2011-03-04 13:57:00.000000000 +0100
++++ parole-0.2.0.2-ui/gst/parole-gst.c	2011-03-04 22:05:43.506704564 +0100
 @@ -34,7 +34,7 @@
  #include <gst/video/video.h>
  
@@ -128,7 +128,7 @@ diff -ur parole-0.2.0.2/gst/parole-gst.c parole-0.2.0.2-ui/gst/parole-gst.c
  	}
 diff -ur parole-0.2.0.2/plugins/tray/Makefile.am parole-0.2.0.2-ui/plugins/tray/Makefile.am
 --- parole-0.2.0.2/plugins/tray/Makefile.am	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/plugins/tray/Makefile.am	2011-03-04 13:57:32.000000000 +0100
++++ parole-0.2.0.2-ui/plugins/tray/Makefile.am	2011-03-04 22:05:43.507704064 +0100
 @@ -19,7 +19,7 @@
  tray_icon_la_CFLAGS =				\
  	$(PLATFORM_CFLAGS)			\
@@ -147,7 +147,7 @@ diff -ur parole-0.2.0.2/plugins/tray/Makefile.am parole-0.2.0.2-ui/plugins/tray/
 +	$(desktop_DATA)
 diff -ur parole-0.2.0.2/plugins/tray/tray-provider.c parole-0.2.0.2-ui/plugins/tray/tray-provider.c
 --- parole-0.2.0.2/plugins/tray/tray-provider.c	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/plugins/tray/tray-provider.c	2011-03-04 13:57:22.000000000 +0100
++++ parole-0.2.0.2-ui/plugins/tray/tray-provider.c	2011-03-04 22:19:55.344321071 +0100
 @@ -31,7 +31,7 @@
  #include <libnotify/notify.h>
  #endif
@@ -157,9 +157,27 @@ diff -ur parole-0.2.0.2/plugins/tray/tray-provider.c parole-0.2.0.2-ui/plugins/t
  #include <libxfce4util/libxfce4util.h>
  
  #include "tray-provider.h"
+@@ -266,7 +266,7 @@
+     g_free (message);
+     
+     notify_notification_attach_to_status_icon (tray->n, tray->tray);
+-    pix = xfce_themed_icon_load (has_video ? "video" : "audio-x-generic", 48);
++    pix = gtk_icon_theme_load_icon ( gtk_icon_theme_get_default(), has_video ? "video" : "audio-x-generic", 48, GTK_ICON_LOOKUP_GENERIC_FALLBACK, NULL);
+     if ( pix )
+     {
+ 	notify_notification_set_icon_from_pixbuf (tray->n, pix);
+@@ -573,7 +573,7 @@
+     tray->notify = TRUE;
+ #endif
+     
+-    pix = xfce_themed_icon_load ("parole", 48);
++    pix = gtk_icon_theme_load_icon ( gtk_icon_theme_get_default(), "parole", 48, GTK_ICON_LOOKUP_GENERIC_FALLBACK, NULL);
+     
+     if ( pix )
+     {
 diff -ur parole-0.2.0.2/src/main.c parole-0.2.0.2-ui/src/main.c
 --- parole-0.2.0.2/src/main.c	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/src/main.c	2011-03-04 13:32:16.000000000 +0100
++++ parole-0.2.0.2-ui/src/main.c	2011-03-04 22:05:43.512701564 +0100
 @@ -311,12 +311,8 @@
      {
  	builder = parole_builder_get_main_interface ();
@@ -176,7 +194,7 @@ diff -ur parole-0.2.0.2/src/main.c parole-0.2.0.2-ui/src/main.c
  	if ( filenames && filenames[0] != NULL )
 diff -ur parole-0.2.0.2/src/Makefile.am parole-0.2.0.2-ui/src/Makefile.am
 --- parole-0.2.0.2/src/Makefile.am	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/src/Makefile.am	2011-03-04 12:33:52.000000000 +0100
++++ parole-0.2.0.2-ui/src/Makefile.am	2011-03-04 22:05:43.513701064 +0100
 @@ -13,11 +13,12 @@
  	-DPAROLE_PLUGINS_DIR=\"$(libdir)/parole-$(PAROLE_VERSION_API)\"\
  	-DPAROLE_PLUGINS_DATA_DIR=\"$(datadir)/parole/parole-plugins-$(PAROLE_VERSION_API)\"\
@@ -207,7 +225,7 @@ diff -ur parole-0.2.0.2/src/Makefile.am parole-0.2.0.2-ui/src/Makefile.am
  	$(TAGLIBC_LIBS)
 diff -ur parole-0.2.0.2/src/parole-about.c parole-0.2.0.2-ui/src/parole-about.c
 --- parole-0.2.0.2/src/parole-about.c	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/src/parole-about.c	2011-03-04 14:00:50.000000000 +0100
++++ parole-0.2.0.2-ui/src/parole-about.c	2011-03-04 22:05:43.516699564 +0100
 @@ -27,73 +27,56 @@
  #include <string.h>
  
@@ -321,7 +339,7 @@ diff -ur parole-0.2.0.2/src/parole-about.c parole-0.2.0.2-ui/src/parole-about.c
  }
 diff -ur parole-0.2.0.2/src/parole-mediachooser.c parole-0.2.0.2-ui/src/parole-mediachooser.c
 --- parole-0.2.0.2/src/parole-mediachooser.c	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/src/parole-mediachooser.c	2011-03-04 12:37:35.000000000 +0100
++++ parole-0.2.0.2-ui/src/parole-mediachooser.c	2011-03-04 22:05:43.519698064 +0100
 @@ -30,7 +30,7 @@
  #include <glib.h>
  
@@ -333,7 +351,7 @@ diff -ur parole-0.2.0.2/src/parole-mediachooser.c parole-0.2.0.2-ui/src/parole-m
  
 diff -ur parole-0.2.0.2/src/parole-medialist.c parole-0.2.0.2-ui/src/parole-medialist.c
 --- parole-0.2.0.2/src/parole-medialist.c	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/src/parole-medialist.c	2011-03-04 13:27:13.000000000 +0100
++++ parole-0.2.0.2-ui/src/parole-medialist.c	2011-03-04 22:05:43.521697064 +0100
 @@ -33,7 +33,7 @@
  #include <gio/gio.h>
  
@@ -363,7 +381,7 @@ diff -ur parole-0.2.0.2/src/parole-medialist.c parole-0.2.0.2-ui/src/parole-medi
      }
 diff -ur parole-0.2.0.2/src/parole-player.c parole-0.2.0.2-ui/src/parole-player.c
 --- parole-0.2.0.2/src/parole-player.c	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/src/parole-player.c	2011-03-04 13:52:31.000000000 +0100
++++ parole-0.2.0.2-ui/src/parole-player.c	2011-03-04 22:07:55.378735565 +0100
 @@ -29,13 +29,14 @@
  #ifdef HAVE_XF86_KEYSYM
  #include <X11/XF86keysym.h>
@@ -389,18 +407,35 @@ diff -ur parole-0.2.0.2/src/parole-player.c parole-0.2.0.2-ui/src/parole-player.
      parole_screen_saver_uninhibit (player->priv->screen_saver);
      parole_player_stopped (player);
  }
-@@ -1874,7 +1875,7 @@
+@@ -1685,13 +1686,6 @@
+ #endif
+ 
+ static void
+-parole_player_session_die_cb (ParolePlayer *player)
+-{
+-    player->priv->exit = TRUE;
+-    parole_gst_terminate (PAROLE_GST (player->priv->gst));
+-}
+-
+-static void
+ parole_gst_set_default_aspect_ratio (ParolePlayer *player, GtkBuilder *builder)
+ {
+     ParoleAspectRatio ratio;
+@@ -1874,10 +1868,7 @@
      g_signal_connect_swapped (player->priv->conf, "notify::reset-saver",
  			      G_CALLBACK (parole_player_reset_saver_changed_cb), player);
      
 -    player->priv->session = parole_session_get ();
+-    
+-    g_signal_connect_swapped (player->priv->session, "die",
+-			      G_CALLBACK (parole_player_session_die_cb), player);
 +    player->priv->session = parole_session_get (NULL);
      
-     g_signal_connect_swapped (player->priv->session, "die",
- 			      G_CALLBACK (parole_player_session_die_cb), player);
+     player->priv->gst = parole_gst_new (FALSE, player->priv->conf);
+ 
 diff -ur parole-0.2.0.2/src/parole-plugins-manager.c parole-0.2.0.2-ui/src/parole-plugins-manager.c
 --- parole-0.2.0.2/src/parole-plugins-manager.c	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/src/parole-plugins-manager.c	2011-03-04 13:27:20.000000000 +0100
++++ parole-0.2.0.2-ui/src/parole-plugins-manager.c	2011-03-04 22:05:43.525695064 +0100
 @@ -29,7 +29,7 @@
  #include <glib.h>
  
@@ -421,7 +456,7 @@ diff -ur parole-0.2.0.2/src/parole-plugins-manager.c parole-0.2.0.2-ui/src/parol
      
 diff -ur parole-0.2.0.2/src/parole-session.c parole-0.2.0.2-ui/src/parole-session.c
 --- parole-0.2.0.2/src/parole-session.c	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/src/parole-session.c	2011-03-04 13:54:39.000000000 +0100
++++ parole-0.2.0.2-ui/src/parole-session.c	2011-03-04 22:22:10.441321067 +0100
 @@ -27,7 +27,7 @@
  #include <string.h>
  
@@ -506,7 +541,7 @@ diff -ur parole-0.2.0.2/src/parole-session.c parole-0.2.0.2-ui/src/parole-sessio
  }
  
  static void
-@@ -130,45 +88,53 @@
+@@ -130,45 +88,52 @@
      
      if ( session->priv->client != NULL )
      {
@@ -548,8 +583,7 @@ diff -ur parole-0.2.0.2/src/parole-session.c parole-0.2.0.2-ui/src/parole-sessio
 +	                                                 client_id,
 +                                                         current_dir,
 +                                                         restart_command,
-+                                                         "/etc/xdg/autostart/" PACKAGE_NAME ".desktop");
-+//                                                         SYSCONFDIR "/xdg/autostart/" PACKAGE_NAME ".desktop");
++							 PACKAGE_NAME ".desktop");
 +        g_free (current_dir);
 +        session->priv->managed = xfce_sm_client_connect (session->priv->client, &error);
 +
@@ -585,7 +619,7 @@ diff -ur parole-0.2.0.2/src/parole-session.c parole-0.2.0.2-ui/src/parole-sessio
 -}
 diff -ur parole-0.2.0.2/src/parole-session.h parole-0.2.0.2-ui/src/parole-session.h
 --- parole-0.2.0.2/src/parole-session.h	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/src/parole-session.h	2011-03-04 13:51:49.000000000 +0100
++++ parole-0.2.0.2-ui/src/parole-session.h	2011-03-04 22:05:43.530692564 +0100
 @@ -50,12 +50,8 @@
  
  GType        			parole_session_get_type        (void) G_GNUC_CONST;
@@ -602,7 +636,7 @@ diff -ur parole-0.2.0.2/src/parole-session.h parole-0.2.0.2-ui/src/parole-sessio
  #endif /* __PAROLE_SESSION_H */
 diff -ur parole-0.2.0.2/src/parole-statusbar.c parole-0.2.0.2-ui/src/parole-statusbar.c
 --- parole-0.2.0.2/src/parole-statusbar.c	2010-01-25 12:22:07.000000000 +0100
-+++ parole-0.2.0.2-ui/src/parole-statusbar.c	2011-03-04 12:37:03.000000000 +0100
++++ parole-0.2.0.2-ui/src/parole-statusbar.c	2011-03-04 22:05:43.534690564 +0100
 @@ -28,7 +28,7 @@
  
  #include <gtk/gtk.h>
@@ -612,9 +646,3 @@ diff -ur parole-0.2.0.2/src/parole-statusbar.c parole-0.2.0.2-ui/src/parole-stat
  
  #include "parole-builder.h"
  #include "parole-statusbar.h"
-Only in parole-0.2.0.2-ui/src: parole-statusbar.c~
-Only in parole-0.2.0.2-ui/src: parole-statusbar.o
-Only in parole-0.2.0.2-ui/src: parole-subtitle-encoding.o
-Only in parole-0.2.0.2-ui/src: parole-utils.o
-Only in parole-0.2.0.2-ui/src: parole-vis.o
-Only in parole-0.2.0.2-ui: stamp-h1
