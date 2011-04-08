@@ -8,6 +8,7 @@ Group:		X11/Applications/Multimedia
 Source0:	http://www.xfce.org/archive/src/apps/parole/0.2/%{name}-%{version}.tar.bz2
 # Source0-md5:	c304b07c3f17feefe3879bacd6e54515
 Patch0:		%{name}-ui.patch
+Patch1:		%{name}-libnotify.patch
 URL:		http://www.xfce.org/projects/parole/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -18,7 +19,7 @@ BuildRequires:	gstreamer-devel >= 0.10.11
 BuildRequires:	glib2-devel >= 1:2.16.0
 BuildRequires:	gtk+2-devel >= 2:2.16.0
 BuildRequires:	intltool >= 0.35.0
-BuildRequires:	libnotify-devel
+BuildRequires:	libnotify-devel >= 0.7
 BuildRequires:	libtool
 BuildRequires:	libxfce4ui-devel >= 4.8.0
 BuildRequires:	libxfce4util-devel >= 4.8.0
@@ -38,6 +39,7 @@ Parole is designed with simplicity, speed and resource usage in mind.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
