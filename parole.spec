@@ -18,6 +18,7 @@ BuildRequires:	gettext-devel
 BuildRequires:	gstreamer-devel >= 0.10.11
 BuildRequires:	glib2-devel >= 1:2.16.0
 BuildRequires:	gtk+2-devel >= 2:2.16.0
+BuildRequires:	gtk+3-devel
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libnotify-devel >= 0.7
 BuildRequires:	libtool
