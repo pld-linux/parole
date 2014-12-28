@@ -14,7 +14,7 @@ BuildRequires:	clutter-devel >= 1.16.4
 BuildRequires:	clutter-gtk-devel >= 1.4.4
 BuildRequires:	dbus-devel >= 0.60
 BuildRequires:	dbus-glib-devel >= 0.70
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gstreamer-devel >= 0.10.11
 BuildRequires:	glib2-devel >= 1:2.16.0
 BuildRequires:	gtk+3-devel
