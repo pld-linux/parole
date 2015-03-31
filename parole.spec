@@ -1,12 +1,11 @@
 Summary:	Simple media player based on the GStreamer framework
-#Summary(pl.UTF-8):	-
 Name:		parole
-Version:	0.7.0
+Version:	0.8.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Multimedia
-Source0:	http://archive.xfce.org/src/apps/parole/0.7/%{name}-%{version}.tar.bz2
-# Source0-md5:	90a63d1b3ef26cd0279801b62cff25ad
+Source0:	http://archive.xfce.org/src/apps/parole/0.8/%{name}-%{version}.tar.bz2
+# Source0-md5:	fffdc23d2aa22271f01410a9e27c3404
 URL:		http://www.xfce.org/projects/parole/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -16,15 +15,15 @@ BuildRequires:	dbus-devel >= 0.60
 BuildRequires:	dbus-glib-devel >= 0.70
 BuildRequires:	gettext-tools
 BuildRequires:	gstreamer-devel >= 0.10.11
-BuildRequires:	glib2-devel >= 1:2.16.0
+BuildRequires:	glib2-devel >= 1:2.30.0
 BuildRequires:	gtk+3-devel
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libnotify-devel >= 0.7
 BuildRequires:	libtool
-BuildRequires:	libxfce4ui-devel >= 4.11.0
-BuildRequires:	libxfce4util-devel >= 4.11.0
+BuildRequires:	libxfce4ui-devel >= 4.12.0
+BuildRequires:	libxfce4util-devel >= 4.12.0
 BuildRequires:	pkgconfig >= 1:0.9.0
-BuildRequires:	xfce4-dev-tools >= 4.11.0
+BuildRequires:	xfce4-dev-tools >= 4.12.0
 Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,8 +32,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Parole is a modern simple media player based on the GStreamer
 framework and written to fit well in the Xfce desktop.
 Parole is designed with simplicity, speed and resource usage in mind.
-
-#%description -l pl.UTF-8
 
 %prep
 %setup -q
