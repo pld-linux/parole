@@ -1,11 +1,11 @@
 Summary:	Simple media player based on the GStreamer framework
 Name:		parole
-Version:	1.0.2
-Release:	2
+Version:	1.0.4
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Multimedia
 Source0:	http://archive.xfce.org/src/apps/parole/1.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	cd22ab579470c5728db0aa6c0b9d4c7d
+# Source0-md5:	c23621eb44df292f828e86074d4e719d
 URL:		http://www.xfce.org/projects/parole/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -20,10 +20,10 @@ BuildRequires:	gtk+3-devel
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libnotify-devel >= 0.7
 BuildRequires:	libtool
-BuildRequires:	libxfce4ui-devel >= 4.12.0
-BuildRequires:	libxfce4util-devel >= 4.12.0
+BuildRequires:	libxfce4ui-devel >= 4.14.0
+BuildRequires:	libxfce4util-devel >= 4.14.0
 BuildRequires:	pkgconfig >= 1:0.9.0
-BuildRequires:	xfce4-dev-tools >= 4.12.0
+BuildRequires:	xfce4-dev-tools >= 4.14.0
 Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 Obsoletes:	xfmedia
@@ -58,6 +58,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__rm} -r $RPM_BUILD_ROOT%{_includedir}
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/parole-0/*.la
 
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/ie
+%{__mv} $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hy}
+
 %find_lang %{name}
 
 %clean
@@ -78,4 +81,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/parole
 %{_desktopdir}/org.xfce.Parole.desktop
 %{_iconsdir}/hicolor/*/apps/parole*
-%{_datadir}/appdata/parole.appdata.xml
+%{_datadir}/metainfo/parole.appdata.xml
