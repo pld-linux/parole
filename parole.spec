@@ -1,11 +1,11 @@
 Summary:	Simple media player based on the GStreamer framework
 Name:		parole
-Version:	1.0.5
+Version:	4.15.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Multimedia
-Source0:	http://archive.xfce.org/src/apps/parole/1.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	74fcde5da018c011e5febd9649817c05
+Source0:	http://archive.xfce.org/src/apps/parole/4.15/%{name}-%{version}.tar.bz2
+# Source0-md5:	baf86d34ff5f88d83343bf7118f06702
 URL:		http://www.xfce.org/projects/parole/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -14,8 +14,8 @@ BuildRequires:	clutter-gtk-devel >= 1.4.4
 BuildRequires:	dbus-devel >= 0.60
 BuildRequires:	dbus-glib-devel >= 0.70
 BuildRequires:	gettext-tools
-BuildRequires:	gstreamer-devel
 BuildRequires:	glib2-devel >= 1:2.30.0
+BuildRequires:	gstreamer-devel
 BuildRequires:	gtk+3-devel
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libnotify-devel >= 0.7
@@ -23,17 +23,18 @@ BuildRequires:	libtool
 BuildRequires:	libxfce4ui-devel >= 4.14.0
 BuildRequires:	libxfce4util-devel >= 4.14.0
 BuildRequires:	pkgconfig >= 1:0.9.0
+BuildRequires:	taglib-devel >= 1.4
 BuildRequires:	xfce4-dev-tools >= 4.14.0
 Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
-Obsoletes:	xfmedia
 Suggests:	gstreamer-imagesink-x
+Obsoletes:	xfmedia
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Parole is a modern simple media player based on the GStreamer
-framework and written to fit well in the Xfce desktop.
-Parole is designed with simplicity, speed and resource usage in mind.
+framework and written to fit well in the Xfce desktop. Parole is
+designed with simplicity, speed and resource usage in mind.
 
 %prep
 %setup -q
@@ -45,8 +46,8 @@ Parole is designed with simplicity, speed and resource usage in mind.
 %{__autoheader}
 %{__automake}
 %configure \
-	--disable-browser-plugin \
-	--enable-clutter
+	--enable-clutter \
+	--enable-taglib
 
 %{__make}
 
@@ -59,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__rm} -r $RPM_BUILD_ROOT%{_includedir}
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/parole-0/*.la
 
-%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/ie
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hye,ie}
 %{__mv} $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hy}
 
 %find_lang %{name}
@@ -75,11 +76,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
+%doc AUTHORS ChangeLog NEWS TODO
 %attr(755,root,root) %{_bindir}/parole
 %dir %{_libdir}/parole-0
 %attr(755,root,root) %{_libdir}/parole-0/*.so
 %{_datadir}/parole
 %{_desktopdir}/org.xfce.Parole.desktop
-%{_iconsdir}/hicolor/*/apps/parole*
+%{_iconsdir}/hicolor/*/apps/org.xfce.parole.*
+%{_iconsdir}/hicolor/*/apps/parole-extension*
 %{_datadir}/metainfo/parole.appdata.xml
