@@ -1,12 +1,12 @@
 Summary:	Simple media player based on the GStreamer framework
 Name:		parole
-Version:	4.16.0
+Version:	4.18.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Multimedia
-Source0:	http://archive.xfce.org/src/apps/parole/4.16/%{name}-%{version}.tar.bz2
-# Source0-md5:	b9adffdef4bab6ca454569d562051843
-URL:		http://www.xfce.org/projects/parole/
+Source0:	https://archive.xfce.org/src/apps/parole/4.18/%{name}-%{version}.tar.bz2
+# Source0-md5:	319cd9bdbda677f93c390edaac91ca45
+URL:		https://www.xfce.org/projects/parole/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	clutter-devel >= 1.16.4
@@ -14,17 +14,17 @@ BuildRequires:	clutter-gtk-devel >= 1.4.4
 BuildRequires:	dbus-devel >= 0.60
 BuildRequires:	dbus-glib-devel >= 0.70
 BuildRequires:	gettext-tools
-BuildRequires:	glib2-devel >= 1:2.30.0
+BuildRequires:	glib2-devel >= 1:2.38.0
 BuildRequires:	gstreamer-devel
 BuildRequires:	gtk+3-devel
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libnotify-devel >= 0.7
 BuildRequires:	libtool
-BuildRequires:	libxfce4ui-devel >= 4.14.0
-BuildRequires:	libxfce4util-devel >= 4.14.0
+BuildRequires:	libxfce4ui-devel >= 4.18.0
+BuildRequires:	libxfce4util-devel >= 4.18.0
 BuildRequires:	pkgconfig >= 1:0.9.0
 BuildRequires:	taglib-devel >= 1.4
-BuildRequires:	xfce4-dev-tools >= 4.14.0
+BuildRequires:	xfce4-dev-tools >= 4.18.0
 Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 Suggests:	gstreamer-imagesink-x
