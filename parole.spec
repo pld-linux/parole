@@ -1,11 +1,11 @@
 Summary:	Simple media player based on the GStreamer framework
 Name:		parole
-Version:	4.18.1
+Version:	4.18.2
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Multimedia
 Source0:	https://archive.xfce.org/src/apps/parole/4.18/%{name}-%{version}.tar.bz2
-# Source0-md5:	29a409b4b22c2d91f210679e5708a19d
+# Source0-md5:	7be0c4cf3c557ccc44a12eecc68d5aff
 URL:		https://www.xfce.org/projects/parole/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -15,16 +15,18 @@ BuildRequires:	dbus-devel >= 0.60
 BuildRequires:	dbus-glib-devel >= 0.70
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.38.0
-BuildRequires:	gstreamer-devel
-BuildRequires:	gtk+3-devel
-BuildRequires:	intltool >= 0.35.0
-BuildRequires:	libnotify-devel >= 0.7
+BuildRequires:	gstreamer-devel >= 1.0.0
+BuildRequires:	gstreamer-plugins-base-devel >= 1.0.0
+BuildRequires:	gtk+3-devel >= 3.22.0
+BuildRequires:	gtk-doc
+BuildRequires:	libnotify-devel >= 0.7.8
 BuildRequires:	libtool
 BuildRequires:	libxfce4ui-devel >= 4.18.0
 BuildRequires:	libxfce4util-devel >= 4.18.0
 BuildRequires:	pkgconfig >= 1:0.9.0
 BuildRequires:	taglib-devel >= 1.4
 BuildRequires:	xfce4-dev-tools >= 4.18.0
+BuildRequires:	xfconf-devel >= 4.18.0
 Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 Suggests:	gstreamer-imagesink-x
